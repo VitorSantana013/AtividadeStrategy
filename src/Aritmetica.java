@@ -1,19 +1,14 @@
 public class Aritmetica extends Disciplina implements ICalcMedia{
-
     private double media;
-
-    public Aritmetica() {
-        super();
-    }
-
     @Override
-    public double CalculaMedia() {
-        media = (getP1() + getP2())/2;
+    public double CalculaMedia(double p1, double p2) {
+
+        media = (p1 + p2)/2;
         return media;
     }
 
     @Override
-    public String Situacao() {
+    public String Situacao(String situacao) {
         if(media > 5){
             setSituacao("Aprovado!");
         }

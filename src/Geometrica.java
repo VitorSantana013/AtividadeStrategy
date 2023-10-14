@@ -1,19 +1,13 @@
-public class Geometrica extends Disciplina implements ICalcMedia{
-
+public class Geometrica extends Disciplina implements ICalcMedia {
     private double media;
-
-    public Geometrica() {
-        super();
-    }
-
     @Override
-    public double CalculaMedia() {
+    public double CalculaMedia(double p1, double p2) {
         media = Math.sqrt((getP1()*getP2()));
         return media;
     }
 
     @Override
-    public String Situacao() {
+    public String Situacao(String situacao) {
         if(media > 7){
             setSituacao("Aprovado!");
         }

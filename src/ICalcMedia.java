@@ -1,4 +1,4 @@
 public interface ICalcMedia {
-   public double CalculaMedia();
-   public String Situacao();
+   public double CalculaMedia(double p1, double p2);
+   public String Situacao(String situacao);
 }

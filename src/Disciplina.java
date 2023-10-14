@@ -7,14 +7,13 @@ public class Disciplina{
    private String situacao;
 
     public Disciplina(){
-
-        Media = 0;
-        P1 = 0;
-        P2 = 0;
-        situacao = "Em curso";
+    }
+    public Disciplina(ICalcMedia calcMedia){
+        this.calcMedia = calcMedia;
     }
    public void CalcularMedia(){
-
+        Media = calcMedia.CalculaMedia(P1,P2);
+        situacao = calcMedia.Situacao(situacao);
    }
 
     //Getters e Setters
@@ -57,13 +56,5 @@ public class Disciplina{
 
     public void setSituacao(String situacao) {
         this.situacao = situacao;
-    }
-
-    public ICalcMedia getCalcMedia() {
-        return calcMedia;
-    }
-
-    public void setCalcMedia(ICalcMedia calcMedia) {
-        this.calcMedia = calcMedia;
     }
 }
