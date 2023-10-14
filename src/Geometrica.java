@@ -2,7 +2,7 @@ public class Geometrica extends Disciplina implements ICalcMedia {
     private double media;
     @Override
     public double CalculaMedia(double p1, double p2) {
-        media = Math.sqrt((getP1()*getP2()));
+        media = Math.sqrt(p1 * p2);
         return media;
     }
 
